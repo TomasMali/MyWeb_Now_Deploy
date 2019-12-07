@@ -23,6 +23,7 @@ import {
 import { LocationStrategy, HashLocationStrategy, APP_BASE_HREF } from '@angular/common';
 import { LoginComponent } from './login/login.component';
 import { environment } from 'src/environments/environment';
+import { SanshiComponent } from './sanshi/sanshi.component';
 
 
 // 2.
@@ -34,7 +35,8 @@ const routes: Routes = [
   { path: 'work', component: WorkComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'contactus', redirectTo: 'contact' },
-  { path: 'login', component: LoginComponent }
+  { path: 'login', component: LoginComponent },
+  {path: 'myprojects/sanshi', component: SanshiComponent }
 ];
 
 
@@ -48,7 +50,8 @@ const routes: Routes = [
     ResumeComponent,
     WorkComponent,
     ContactComponent,
-    LoginComponent
+    LoginComponent,
+    SanshiComponent
   ],
   imports: [
     BrowserModule,
