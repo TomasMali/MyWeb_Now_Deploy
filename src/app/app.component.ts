@@ -1,9 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { UserService } from './user.service';
 import { AngularFireDatabase } from 'angularfire2/database';
-import { of as observableOf, Observable } from 'rxjs';
-import { debug } from 'util';
 import {  ElementRef,  ViewChild } from '@angular/core';
 
 
@@ -17,7 +14,7 @@ import {  ElementRef,  ViewChild } from '@angular/core';
 export class AppComponent {
   user_name: any[]
 validation : boolean= false;
-@ViewChild('btnClose') btnClose : ElementRef ;
+@ViewChild('btnClose',{static: true}) btnClose : ElementRef ;
 
 
 
