@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "name": "this_is_my_web_in_now",
+  "name": "demo",
   "builds": [
     {
       "src": "package.json",
