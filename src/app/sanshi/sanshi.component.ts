@@ -14,7 +14,7 @@ export class SanshiComponent implements OnInit {
 
   constructor(public http: HttpClient) { 
     this.http
-    .get('http://localhost:3000/users/').subscribe((response)=> {
+    .get('http://93.49.6.246:3000/users/').subscribe((response)=> {
       console.log(response)
       
       this.response = response
@@ -30,7 +30,7 @@ export class SanshiComponent implements OnInit {
 
 getTables(){
   this.http
-    .get('http://localhost:3000/users/').subscribe((response)=> {
+    .get('http://93.49.6.246:3000/users/').subscribe((response)=> {
       console.log(response)
       this.response = response
     })
