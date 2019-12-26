@@ -1,24 +1,25 @@
-
-
-
-
 <div class="container">
-  <h2> Resoconto tavolo: {{response.message[0].table}} </h2>
+  <hr> 
+  <h4 class="text-center "> Resoconto tavolo: {{response.message[0].table}} </h4>
+  <hr> 
   <table class="table table-light table-hover">
-    <thead>
+    <thead class="thead-dark">
       <tr>
         <th>Nome</th>
         <th>Ordinate</th>
         <th>Arrivate</th>
+        <th>Da Arrivare</th>
       </tr>
     </thead>
-    <tbody>
-      <tr *ngFor="let item of response.message">
-        <td>{{item.name}}</td>
-        <td>{{item.telegramId}}</td>
-        <td>j</td>
+    <tbody *ngFor="let item_list of response.message">
+      <h4 class="text-center text-success">{{item_list.name}}</h4 >
+      <tr *ngFor="let item of item_list.menus">
+          <td>{{item.name}}</td>
+          <td>{{item.quantity}}</td>
+          <td>{{item.arrived}}</td>
+          <td>{{item.quantity-item.arrived}}</td>
       </tr>
-    
+
     </tbody>
   </table>
 </div>
